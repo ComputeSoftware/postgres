@@ -3,5 +3,5 @@
 ## Installation
 
 ```clojure
-com.computesoftware/postgres {:mvn/version "1.0.2"}
+com.computesoftware/postgres {:mvn/version "1.0.6"}
 ```
