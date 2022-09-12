@@ -30,7 +30,8 @@
     (when (some? read-only)
       (.setReadOnly hikari-datasource auto-commit))
     (when validation-timeout
-      (.setValidationTimeout hikari-datasource validation-timeout))))
+      (.setValidationTimeout hikari-datasource validation-timeout))
+    hikari-datasource))
 
 (defn new-data-source
   "Returns a thunk that returns Connections. Takes an argument map of the following.
