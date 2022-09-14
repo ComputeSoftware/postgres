@@ -11,7 +11,9 @@ jobs:
           key: clj-{{ checksum "deps.edn"}}
       - run:
           name: Run tests
-          command: ./bin/kaocha
+          command: ./bin/kaocha --reporter kaocha.report/documentation --plugin profiling --plugin kaocha.plugin/junit-xml --junit-xml-file test-results/kaocha/results.xml
+      - store_test_results:
+          path: test-results
       - save_cache:
           paths:
             - ~/.m2
